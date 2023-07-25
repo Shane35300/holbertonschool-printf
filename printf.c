@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 /**
  * _printf - Print all types
  * @format: first parameter
