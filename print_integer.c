@@ -21,7 +21,7 @@ void print_integer(int nombre)
 		nombre /= 10;
 		i++;
 	}
-	while (i >= 0)
+	while (i > 0)
 	{
 		_putchar(afficheur[i - 1]);
 		i--;

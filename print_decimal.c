@@ -3,36 +3,28 @@
 
 void print_decimal(int nombre)
 {
-	double nbr_fract;
-	int nbr_entier;
-	int entier;
+	char afficheur[10];
 	int i = 0;
+
 	if (nombre == 0)
-	{
-		_putchar('0');
-		return;
-	}
+	_putchar('0');
+
 	if (nombre < 0)
 	{
 		nombre = -(nombre);
 		_putchar('-');
 	}
-	nbr_entier = (int)nombre;
 
-	print_integer(nbr_entier);
-
-	if (nombre - nbr_entier != 0)
+	while (nombre > 0)
 	{
-		_putchar('.');
-		nbr_fract = nombre - nbr_entier;
-
-		while (i < 6)
-		{
-			nbr_fract *= 10;
-			entier = (int)nbr_fract;
-			_putchar('0' + entier);
-			nbr_fract -= entier;
-			i++;
-		}
+		afficheur[i] = '0' + nombre % 10;
+		nombre /= 10;
+		i++;
 	}
+	while (i >= 0)
+	{
+		_putchar(afficheur[i - 1]);
+		i--;
+	}
+
 }

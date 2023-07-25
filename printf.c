@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		int i = 0, j;
 		int lenght = 0;
 		va_start(list, format);
-		while (format[i])
+		while (format && format[i])
 		{
 			if (format[i] == '%')
 			{
@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 					{
 						array[j].f(list);
 						i += 2;
+						lenght++;
 						break;
 					}
 					j++;

@@ -44,5 +44,5 @@ void integer(va_list list)
 void decimal(va_list list)
 {
     int d = va_arg(list, int);
-    print_decimal(d);
+    print_integer(d);
 }
