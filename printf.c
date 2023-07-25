@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"i", integer},
 		{"d", decimal},
 		{"%", percent},
+		{"u", unsigned_int},
 		{NULL, NULL},
 		};
 		va_list list;

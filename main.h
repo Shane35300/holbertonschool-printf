@@ -22,5 +22,7 @@ void decimal(va_list list);
 void print_integer(int nombre);
 void print_decimal(int nombre);
 void percent(va_list list);
+void unsigned_int(va_list list);
+void print_un_int(unsigned int nombre);
 
 #endif /* MAIN_H */

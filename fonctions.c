@@ -5,7 +5,6 @@
 /**
  * strings - Print strings
  * @list: va_list argument
- * Return: Print strings
 */
 void strings(va_list list)
 {
@@ -21,7 +20,6 @@ i++;
 /**
  * character - Print character
  * @list: va_list argument
- * Return: Print character
 */
 void character(va_list list)
 {
@@ -31,7 +29,6 @@ _putchar(c);
 /**
  * integer - Print integer
  * @list: va_list argument
- * Return: Print integer
 */
 void integer(va_list list)
 {
@@ -41,10 +38,19 @@ print_integer(i);
 /**
  * decimal - Print decimal
  * @list: va_list argument
- * Return: Print decimal
 */
 void decimal(va_list list)
 {
 int d = va_arg(list, int);
 print_integer(d);
+}
+/**
+ * unsigned_int - Print decimal
+ * @list: va_list argument
+*/
+void unsigned_int(va_list list)
+{
+	unsigned int unint = va_arg(list, unsigned int);
+
+	print_un_int(unint);
 }
