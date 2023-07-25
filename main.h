@@ -16,5 +16,6 @@ void integer(va_list list);
 void decimal(va_list list);
 void print_integer(int nombre);
 void print_decimal(int nombre);
+void percent(va_list list);
 
 #endif /* MAIN_H */
