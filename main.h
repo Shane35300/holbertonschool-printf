@@ -2,11 +2,15 @@
 #define MAIN_H
 #include <stdarg.h>
 
-
+/**
+ * struct array - Short description
+ * @element: First member
+ * @f: pointeur de fonction
+*/
 typedef struct array
 {
-    char *element;
-    void (*f)(va_list list);
+char *element;
+void (*f)(va_list list);
 } elem_t;
 int _putchar(char c);
 int _printf(const char *format, ...);

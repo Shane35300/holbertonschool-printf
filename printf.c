@@ -19,7 +19,9 @@ int _printf(const char *format, ...)
 		va_list list;
 		int i = 0, j;
 		int lenght = 0;
+
 		va_start(list, format);
+
 		while (format && format[i])
 		{
 			if (format[i] == '%')
