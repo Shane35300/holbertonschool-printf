@@ -1,7 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-#ifndef MAIN_H
-#define MAIN_H
 #include <stdarg.h>
 
 typedef struct array
@@ -17,8 +15,5 @@ void integer(va_list list);
 void decimal(va_list list);
 void print_integer(int nombre);
 void print_decimal(int nombre);
-
-#endif /* MAIN_H */
-
 
 #endif /* MAIN_H */
