@@ -1,6 +1,6 @@
 #include "main.h"
 
-void print_decimal(int nombre)
+int print_decimal(int nombre)
 {
 	char afficheur[10];
 	int i = 0;
