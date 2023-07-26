@@ -4,7 +4,6 @@
 * @nombre: number
 * Return: Print one integer
 */
-
 int print_integer(int nombre)
 {
 	char afficheur[10];

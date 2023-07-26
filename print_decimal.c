@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * print_decimal - nom de la fonction
+ * Description: print une décimale
+ * @nombre: nombre
+ * Return: retourne la longueur
+*/
 int print_decimal(int nombre)
 {
 	char afficheur[10];

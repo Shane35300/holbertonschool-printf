@@ -3,6 +3,7 @@
  * percent - pourcentage
  * Description: description
  * @list: variable
+ * Return: retourne la longueur
 */
 int percent(va_list list)
 {

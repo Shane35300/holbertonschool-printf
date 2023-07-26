@@ -13,6 +13,7 @@ typedef struct array
 char *element;
 int (*f)(va_list list);
 } elem_t;
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int strings(va_list list);
