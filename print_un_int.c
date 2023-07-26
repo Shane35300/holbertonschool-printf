@@ -7,8 +7,8 @@
 */
 int print_un_int(unsigned int nombre)
 {
-	char afficheur[10];
-	int i = 0;
+	char afficheur[11];
+	int i = 1;
 	int count = 0;
 
 	if (nombre == 0)
@@ -24,7 +24,7 @@ int print_un_int(unsigned int nombre)
 		nombre /= 10;
 		i++;
 	}
-	while (i > 0)
+	while (i > 1)
 	{
 		count += _putchar(afficheur[i - 1]);
 		i--;

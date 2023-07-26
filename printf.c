@@ -39,8 +39,7 @@ int _printf(const char *format, ...)
 					j++;
 				}
 			}
-			_putchar(format[i]);
-			lenght++;
+			lenght += _putchar(format[i]);
 			i++;
 		}
 	va_end(list);

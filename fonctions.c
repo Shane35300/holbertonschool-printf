@@ -16,9 +16,6 @@ int strings(va_list list)
 	if (!s) /*if s is NULL */
 	s = "(null)";
 
-	if (s[0] == '\0')
-	s = "(nothing)";
-
 	while (s[i] != '\0')
 	{
 		count += _putchar(s[i]);

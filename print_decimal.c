@@ -7,12 +7,15 @@
 */
 int print_decimal(int nombre)
 {
-	char afficheur[10];
-	int i = 0;
+	char afficheur[21];
+	int i = 1;
 	int count = 0;
 
 	if (nombre == 0)
-	count += _putchar('0');
+	{
+		count += _putchar('0');
+		return (count);
+	}
 
 	if (nombre < 0)
 	{
@@ -26,7 +29,7 @@ int print_decimal(int nombre)
 		nombre /= 10;
 		i++;
 	}
-	while (i >= 0)
+	while (i > 1)
 	{
 		count += _putchar(afficheur[i - 1]);
 		i--;
