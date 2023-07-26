@@ -8,21 +8,19 @@
 */
 int strings(va_list list)
 {
-char *s = va_arg(list, char*);
-int i = 0;
-int count = 0;
+	char *s = va_arg(list, char*);
+	int i = 0;
+	int count = 0;
 
-if (s == NULL)
-{
-	return (0);
-}
+	if (s == NULL)
+	s = "(null)";
 
-while (s[i] != '\0')
-{
-	count += _putchar(s[i]);
-	i++;
-}
-return (count);
+	while (s[i] != '\0')
+	{
+		count += _putchar(s[i]);
+		i++;
+	}
+	return (count);
 }
 
 /**
