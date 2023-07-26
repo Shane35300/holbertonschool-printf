@@ -34,7 +34,6 @@ int _printf(const char *format, ...)
 					{
 						lenght += array[j].f(list);
 						i += 2;
-						lenght++;
 						break;
 					}
 					j++;
