@@ -11,10 +11,16 @@ char *s = va_arg(list, char*);
 int i = 0;
 int count = 0;
 
+	if (s == NULL)
+	{
+		s = NULL;
+		return (0);
+	}
+
 while (s[i] != '\0')
 {
-count += _putchar(s[i]);
-i++;
+	count += _putchar(s[i]);
+	i++;
 }
 return (count);
 }
@@ -25,11 +31,11 @@ return (count);
 */
 int character(va_list list)
 {
-int c = va_arg(list, int);
-int count = 0;
+	int c = va_arg(list, int);
+	int count = 0;
 
-count += _putchar(c);
-return (count);
+	count += _putchar(c);
+	return (count);
 }
 
 /**
@@ -38,11 +44,11 @@ return (count);
 */
 int integer(va_list list)
 {
-int i = va_arg(list, int);
-int count = 0;
+	int i = va_arg(list, int);
+	int count = 0;
 
-count += print_integer(i);
-return (count);
+	count += print_integer(i);
+	return (count);
 }
 
 /**
@@ -51,11 +57,11 @@ return (count);
 */
 int decimal(va_list list)
 {
-int d = va_arg(list, int);
-int count = 0;
+	int d = va_arg(list, int);
+	int count = 0;
 
-count += print_integer(d);
-return (count);
+	count += print_integer(d);
+	return (count);
 }
 
 /**
