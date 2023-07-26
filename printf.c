@@ -43,7 +43,6 @@ int _printf(const char *format, ...)
 			lenght++;
 			i++;
 		}
-
 	va_end(list);
 	return (lenght);
 }
