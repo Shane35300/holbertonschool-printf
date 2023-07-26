@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				{
 					if (format[i + 1] == *(array[j].element))
 					{
-						array[j].f(list);
+						lenght += array[j].f(list);
 						i += 2;
 						lenght++;
 						break;

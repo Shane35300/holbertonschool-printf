@@ -4,14 +4,15 @@ void print_decimal(int nombre)
 {
 	char afficheur[10];
 	int i = 0;
+	int count = 0;
 
 	if (nombre == 0)
-	_putchar('0');
+	count += _putchar('0');
 
 	if (nombre < 0)
 	{
 		nombre = -(nombre);
-		_putchar('-');
+		count += _putchar('-');
 	}
 
 	while (nombre > 0)
@@ -22,8 +23,9 @@ void print_decimal(int nombre)
 	}
 	while (i >= 0)
 	{
-		_putchar(afficheur[i - 1]);
+		count += _putchar(afficheur[i - 1]);
 		i--;
 	}
 
+	return (count);
 }
