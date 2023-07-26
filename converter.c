@@ -4,8 +4,12 @@
  * Description: description
  * @list: variable
 */
-void percent(va_list list)
+int percent(va_list list)
 {
+	int count = 0;
+
 	(void)list;
-	_putchar('%');
+	count += _putchar('%');
+	return (count);
+
 }

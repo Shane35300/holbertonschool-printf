@@ -62,7 +62,7 @@ return (count);
  * unsigned_int - Print decimal
  * @list: va_list argument
 */
-unsigned int unsigned_int(va_list list)
+int unsigned_int(va_list list)
 {
 	unsigned int unint = va_arg(list, unsigned int);
 	int count = 0;
