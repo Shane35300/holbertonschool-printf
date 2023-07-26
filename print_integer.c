@@ -1,4 +1,9 @@
 #include "main.h"
+/*
+* print_integer - Print one integer
+* @nombre: number
+* Return: Print one integer
+*/
 
 int print_integer(int nombre)
 {

@@ -1,9 +1,11 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
+#include <string.h>
 /**
  * strings - Print strings
  * @list: va_list argument
+ * Return: Print strings
 */
 int strings(va_list list)
 {
@@ -12,7 +14,10 @@ int strings(va_list list)
 	int count = 0;
 
 	if (!s) /*if s is NULL */
-		s = "(null)";
+	s = "(null)";
+
+	if (s[0] == '\0')
+	s = "(nothing)";
 
 	while (s[i] != '\0')
 	{
@@ -25,6 +30,7 @@ int strings(va_list list)
 /**
  * character - Print character
  * @list: va_list argument
+ * Return: Print character
 */
 int character(va_list list)
 {
@@ -38,6 +44,7 @@ int character(va_list list)
 /**
  * integer - Print integer
  * @list: va_list argument
+ * Return: Print integer
 */
 int integer(va_list list)
 {
@@ -51,6 +58,7 @@ int integer(va_list list)
 /**
  * decimal - Print decimal
  * @list: va_list argument
+ * Return: Print decimal
 */
 int decimal(va_list list)
 {
@@ -64,6 +72,7 @@ int decimal(va_list list)
 /**
  * unsigned_int - Print decimal
  * @list: va_list argument
+ * Return: Print decimal
 */
 int unsigned_int(va_list list)
 {
