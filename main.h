@@ -17,10 +17,10 @@ int _printf(const char *format, ...);
 int strings(va_list list);
 int character(va_list list);
 int integer(va_list list);
-void decimal(va_list list);
-void print_integer(int nombre);
-void print_decimal(int nombre);
-void percent(va_list list);
+int decimal(va_list list);
+int print_integer(int nombre);
+int print_decimal(int nombre);
+int percent(va_list list);
 int unsigned_int(va_list list);
 int print_un_int(unsigned int nombre);
 
