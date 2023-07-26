@@ -11,6 +11,12 @@ char *s = va_arg(list, char*);
 int i = 0;
 int count = 0;
 
+if (s == NULL)
+{
+	s = NULL;
+	return (0);
+}
+
 while (s[i] != '\0')
 {
 count += _putchar(s[i]);
