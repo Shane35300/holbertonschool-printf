@@ -4,6 +4,7 @@
 /**
  * strings - Print strings
  * @list: va_list argument
+ * Return: retourne la longueur
 */
 int strings(va_list list)
 {
@@ -13,7 +14,6 @@ int count = 0;
 
 if (s == NULL)
 {
-	s = NULL;
 	return (0);
 }
 
@@ -28,6 +28,7 @@ return (count);
 /**
  * character - Print character
  * @list: va_list argument
+ * Return: retourne la longueur
 */
 int character(va_list list)
 {
@@ -41,6 +42,7 @@ int character(va_list list)
 /**
  * integer - Print integer
  * @list: va_list argument
+ * Return: retourne la longueur
 */
 int integer(va_list list)
 {
@@ -54,6 +56,7 @@ int integer(va_list list)
 /**
  * decimal - Print decimal
  * @list: va_list argument
+ * Return: retourne la longueur
 */
 int decimal(va_list list)
 {
@@ -67,6 +70,7 @@ int decimal(va_list list)
 /**
  * unsigned_int - Print decimal
  * @list: va_list argument
+ * Return: retourne la longueur
 */
 int unsigned_int(va_list list)
 {

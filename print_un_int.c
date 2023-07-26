@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * print_un_int - nom de la fonction
+ * Description: print une décimale
+ * @nombre: nombre
+ * Return: retourne la longueur
+*/
 int print_un_int(unsigned int nombre)
 {
 	char afficheur[10];
