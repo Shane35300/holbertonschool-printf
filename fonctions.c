@@ -5,51 +5,68 @@
  * strings - Print strings
  * @list: va_list argument
 */
-void strings(va_list list)
+int strings(va_list list)
 {
 char *s = va_arg(list, char*);
 int i = 0;
+int count = 0;
 
 while (s[i] != '\0')
 {
-_putchar(s[i]);
+count += _putchar(s[i]);
 i++;
 }
+return (count);
 }
+
 /**
  * character - Print character
  * @list: va_list argument
 */
-void character(va_list list)
+int character(va_list list)
 {
 int c = va_arg(list, int);
-_putchar(c);
+int count = 0;
+
+count += _putchar(c);
+return (count);
 }
+
 /**
  * integer - Print integer
  * @list: va_list argument
 */
-void integer(va_list list)
+int integer(va_list list)
 {
 int i = va_arg(list, int);
-print_integer(i);
+int count = 0;
+
+count += print_integer(i);
+return (count);
 }
+
 /**
  * decimal - Print decimal
  * @list: va_list argument
 */
-void decimal(va_list list)
+int decimal(va_list list)
 {
 int d = va_arg(list, int);
-print_integer(d);
+int count = 0;
+
+count += print_integer(d);
+return (count);
 }
+
 /**
  * unsigned_int - Print decimal
  * @list: va_list argument
 */
-void unsigned_int(va_list list)
+unsigned int unsigned_int(va_list list)
 {
 	unsigned int unint = va_arg(list, unsigned int);
+	int count = 0;
 
-	print_un_int(unint);
+	count += print_un_int(unint);
+	return (count);
 }
