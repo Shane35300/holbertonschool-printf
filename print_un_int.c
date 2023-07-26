@@ -7,7 +7,10 @@ int print_un_int(unsigned int nombre)
 	int count = 0;
 
 	if (nombre == 0)
-	count += _putchar('0');
+	{
+		count += _putchar('0');
+		return (count);
+	}
 
 
 	while (nombre > 0)
