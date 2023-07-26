@@ -16,8 +16,8 @@ int main(void)
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
-
-    _printf("Length:[%d, %i]\n", NULL , len);
+    addr = (void *)0x7ffe637541f0;
+    _printf("Length:[%d, %i]\n", len , len);
     printf("Length:[%d, %i]\n", len2, len2);
     _printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
@@ -39,16 +39,8 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
-    _printf("%i\n", NULL);
-    printf("%i\n", NULL);
-    _printf("%d\n", NULL);
-    printf("%d\n", NULL);
     _printf("%s\n", NULL);
-    printf("%s\n", NULL);
-    printf("%s\n", NULL);
-    _printf("%s\n", NULL);
-    printf("%s\n", NULL);
-
+    _printf("%s\n", "");
     return (0);
 
 }

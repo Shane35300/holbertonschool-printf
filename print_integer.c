@@ -1,9 +1,8 @@
 #include "main.h"
-/**
- * print_integer - nom de la fonction
- * Description: print une décimale
- * @nombre: nombre
- * Return: retourne la longueur
+/*
+* print_integer - Print one integer
+* @nombre: number
+* Return: Print one integer
 */
 int print_integer(int nombre)
 {
