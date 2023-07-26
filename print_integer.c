@@ -1,6 +1,7 @@
 #include "main.h"
-/*
+/**
 * print_integer - Print one integer
+* Description: print the integers
 * @nombre: number
 * Return: Print one integer
 */
