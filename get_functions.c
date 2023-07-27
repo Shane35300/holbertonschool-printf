@@ -24,7 +24,6 @@ int get_function(const char *format, va_list list, elem_t *array)
 					if (format[i] == array[j].element)
 					{
 						length += array[j].f(list);
-						i++;
 						break;
 					}
 					j++;
@@ -33,14 +32,11 @@ int get_function(const char *format, va_list list, elem_t *array)
 				{
 					length += _putchar('%');
 					length += _putchar(format[i]);
-					i++;
 				}
 			}
 			else
-			{
 				length += _putchar(format[i]);
-				i++;
-			}
+			i++;
 		}
 		return (length);
 }
