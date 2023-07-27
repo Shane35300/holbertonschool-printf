@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
+
 /**
  * _printf - Print all types
  * @format: first parameter
  * Return: Print all types
-*/
+ */
 int _printf(const char *format, ...)
 {
 	elem_t array[] = {
@@ -13,40 +14,43 @@ int _printf(const char *format, ...)
 		{'s', strings},
 		{'i', integer},
 		{'d', decimal},
-		{'%', percent},
-		{'u', unsigned_int}
-		};
-		va_list list;
-		int i = 0, j;
-		int lenght = 0;
+		{'%', print_percent},
+		{'u', unsigned_int}};
 
-		va_start(list, format);
+	va_list list;
+	int i = 0, j, length = 0, prevLength;
 
-		if (format == NULL)
+	va_start(list, format);
+
+	if (format == NULL)
 		return (-1);
 
-		while (format[i] != '\0')
+	while (format[i] != '\0')
+	{
+		if (format[i] == '%')
 		{
-			if (format[i] == '%')
-			{
-				i++;
-				j = 0;
-				while (j < 6)
-				{
-					if (format[i] == array[j].element)
-					{
-						lenght += array[j].f(list);
-						break;
-					}
-					j++;
-				}
-			}
-			else
-			{
-				lenght += _putchar(format[i]);
-			}
 			i++;
+			j = 0;
+			prevLength = length;
+			while (j < 6)
+			{
+				if (format[i] == array[j].element)
+				{
+					length += array[j].f(list);
+					break;
+				}
+				j++;
+			}
+			if (prevLength == length)
+			{
+				length += _putchar('%');
+				length += _putchar(format[i]);
+			}
 		}
+		else
+			length += _putchar(format[i]);
+		i++;
+	}
 	va_end(list);
-	return (lenght);
+	return (length);
 }

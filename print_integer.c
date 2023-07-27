@@ -7,7 +7,7 @@
 */
 int print_integer(int nombre)
 {
-	char afficheur[20];
+	char afficheur[11];
 	int i = 1;
 	int count = 0;
 

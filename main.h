@@ -22,7 +22,7 @@ int integer(va_list list);
 int decimal(va_list list);
 int print_integer(int nombre);
 int print_decimal(int nombre);
-int percent(va_list list);
+int print_percent(va_list list);
 int unsigned_int(va_list list);
 int print_un_int(unsigned int nombre);
 
