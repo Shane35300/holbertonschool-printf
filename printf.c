@@ -15,42 +15,19 @@ int _printf(const char *format, ...)
 		{'i', integer},
 		{'d', decimal},
 		{'%', print_percent},
-		{'u', unsigned_int}};
+		{'u', unsigned_int}
+		};
 
 	va_list list;
-	int i = 0, j, length = 0, prevLength;
+	int length = 0;
 
 	va_start(list, format);
 
 	if (format == NULL)
 		return (-1);
 
-	while (format[i] != '\0')
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			j = 0;
-			prevLength = length;
-			while (j < 6)
-			{
-				if (format[i] == array[j].element)
-				{
-					length += array[j].f(list);
-					break;
-				}
-				j++;
-			}
-			if (prevLength == length && format[i] != 's')
-			{
-				length += _putchar('%');
-				length += _putchar(format[i]);
-			}
-		}
-		else
-			length += _putchar(format[i]);
-		i++;
-	}
+	length = get_function(format, list, array);
+
 	va_end(list);
 	return (length);
 }

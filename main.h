@@ -2,7 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * struct array - Short description
  * @element: First member
@@ -25,5 +25,6 @@ int print_decimal(int nombre);
 int print_percent(va_list list);
 int unsigned_int(va_list list);
 int print_un_int(unsigned int nombre);
+int get_function(const char *format, va_list list, elem_t *array);
 
 #endif /* MAIN_H */

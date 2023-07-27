@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
 * print_integer - Print one integer
 * Description: print the integers
@@ -11,12 +12,19 @@ int print_integer(int nombre)
 	int i = 1;
 	int count = 0;
 
+	if (nombre == INT_MIN)
+	{
+		count = write (1, "-", 1);
+		count += write (1, "2147483648", 10);
+	}
+
 	if (nombre == 0)
 	count += _putchar('0');
 
 	if (nombre < 0)
 	{
-		nombre = -(nombre);
+		nombre = -nombre;
+		if (nombre != INT_MIN)
 		count += _putchar('-');
 	}
 
