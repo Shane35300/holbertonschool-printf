@@ -10,7 +10,7 @@
 */
 typedef struct array
 {
-char *element;
+char element;
 int (*f)(va_list list);
 } elem_t;
 

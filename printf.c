@@ -9,13 +9,12 @@
 int _printf(const char *format, ...)
 {
 	elem_t array[] = {
-		{"c", character},
-		{"s", strings},
-		{"i", integer},
-		{"d", decimal},
-		{"%", percent},
-		{"u", unsigned_int},
-		{NULL, NULL},
+		{'c', character},
+		{'s', strings},
+		{'i', integer},
+		{'d', decimal},
+		{'%', percent},
+		{'u', unsigned_int}
 		};
 		va_list list;
 		int i = 0, j;
@@ -24,25 +23,28 @@ int _printf(const char *format, ...)
 		va_start(list, format);
 
 		if (format == NULL)
-		return (1);
+		return (-1);
 
-		while (format && format[i])
+		while (format[i] != '\0')
 		{
 			if (format[i] == '%')
 			{
+				i++;
 				j = 0;
-				while (array[j].element != NULL)
+				while (j < 6)
 				{
-					if (format[i + 1] == *(array[j].element))
+					if (format[i] == array[j].element)
 					{
 						lenght += array[j].f(list);
-						i += 2;
 						break;
 					}
 					j++;
 				}
 			}
-			lenght += _putchar(format[i]);
+			else
+			{
+				lenght += _putchar(format[i]);
+			}
 			i++;
 		}
 	va_end(list);
