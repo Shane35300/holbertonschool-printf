@@ -3,6 +3,8 @@
 /**
  * get_function - Print all types
  * @format: first parameter
+ * @list: va_list
+ * @array: struct
  * Return: Print all types
  */
 
@@ -10,7 +12,7 @@ int get_function(const char *format, va_list list, elem_t *array)
 {
 	int i = 0, j, length = 0, prevLength;
 
-	while (format[i] != '\0')
+		while (format[i] != '\0')
 		{
 			if (format[i] == '%')
 			{
@@ -28,13 +30,8 @@ int get_function(const char *format, va_list list, elem_t *array)
 				}
 				if (prevLength == length && format[i] != 's')
 				{
-					if (format[i + 1] != '\0')
-					{
 					length += _putchar('%');
 					length += _putchar(format[i]);
-					}
-					if (format[i + 1] == '\0')
-					length = -1;
 				}
 			}
 			else
