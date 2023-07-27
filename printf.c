@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			if (prevLength == length)
+			if (prevLength == length && format[i] != 's')
 			{
 				length += _putchar('%');
 				length += _putchar(format[i]);
