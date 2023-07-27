@@ -14,8 +14,8 @@ int print_integer(int nombre)
 
 	if (nombre == INT_MIN)
 	{
-		count = write (1, "-", 1);
-		count += write (1, "2147483648", 10);
+		count = write(1, "-", 1);
+		count += write(1, "2147483648", 10);
 	}
 
 	if (nombre == 0)
