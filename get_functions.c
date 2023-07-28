@@ -17,6 +17,9 @@ int get_function(const char *format, va_list list, elem_t *array)
 			if (format[i] == '%')
 			{
 				i++;
+				if (format[i] == '\0')
+				return (-1);
+				
 				j = 0;
 				prevLength = length;
 				while (j < 6)
