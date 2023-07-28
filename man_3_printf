@@ -1,0 +1,56 @@
+ _PRINTF()                                                                       User Commands                                                                       PRINTF(1)
+
+NAME
+       _printf - format and print data
+
+SYNOPSIS
+       _printf FORMAT [ARGUMENT]...
+       _printf OPTION
+
+DESCRIPTION
+       Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output as in C _printf.  Interpreted sequences are:
+
+       \"     double quote
+
+       \\     backslash
+
+       \n     new line
+
+
+       %%     a single %
+
+       %s     ARGUMENT as a string
+
+       %c     ARGUMENT as caractere
+
+	   %d or %i     ARGUMENT as integer
+
+
+AUTHOR
+       Written by Antoine LELIEVRE, Nadège TETTELIN, Shane VAUDREY.
+
+REPORTING BUGS
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+       Report printf translation bugs to <https://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright © 2023 Holberton School, Inc.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       printf(3)
+
+       Full documentation at: <https://www.gnu.org/software/coreutils/printf>
+       or available locally via: info '(coreutils) printf invocation'
+
+WARNING
+      This man version is not complete.
+
+GNU coreutils 8.30
