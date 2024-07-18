@@ -17,7 +17,6 @@ int print_un_int(unsigned int nombre)
 		return (count);
 	}
 
-
 	while (nombre > 0)
 	{
 		afficheur[i] = '0' + nombre % 10;
