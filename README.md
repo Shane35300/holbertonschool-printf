@@ -34,12 +34,12 @@ This project is a reimplementation of the `printf` function in C. The goal is to
 
 ## Compilation
 My code will be compiled this way:
-```sh
+
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## Usage
 Here is an example of how to use the `_printf` function:
-```c
+
 #include "main.h"
 
 int main(void)
